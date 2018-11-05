@@ -15,25 +15,34 @@ def prompt_user
 end
 
 def get_user_input
-  # code #get_user_input here
+  gets.chomp 
 end
 
-def end_game
-  # code #end_game here
+def end_game(number)
+  "Sorry, you hit #{number}. Thanks for playing!"
 end
 
 def initial_round
-  # code #initial_round here
+  deal_card
+  deal_card
+  display_card_total
 end
 
-def hit?
-  # code hit? here
+def hit?(number)
+  prompt_user
+  get_user_input
+  if 'h'
+    deal_card
+  elsif
+    invalid_command
+    prompt_user
+  end 
 end
 
 def invalid_command
-  # code invalid_command here
-end
-
+ puts "Please enter a valid command"
+end 
+ 
 #####################################################
 # get every test to pass before coding runner below #
 #####################################################
